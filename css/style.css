@@ -1,0 +1,42 @@
+/****************************************
+*    Variables
+*****************************************/
+:root {
+  --white: #ebebeb;
+  --black: #000000;
+  --link: #0000ee;
+  --hover: #551a8b;
+  --font-family: -apple-system, sans-serif;
+}
+
+/****************************************
+*    Base
+*****************************************/
+body {
+  color: var(--black);
+  background: var(--white);
+  font-family: var(--font-family);
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover,
+a:active {
+  color: var(--hover);
+  text-decoration: none;
+}
+
+/****************************************
+*    Componentes - Common
+*****************************************/
+
+/****************************************
+*    Helpers
+*****************************************/
+/* Ayuda visual temporal */
+.outline {
+  outline: 2px dotted blue;
+}
