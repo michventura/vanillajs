@@ -1,12 +1,20 @@
+/* Tipografía */
+@font-face {
+  font-family: "source-sans-pro";
+  src: url("../assets/fonts/SourceSansPro.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+}
+
 /****************************************
 *    Variables
 *****************************************/
 :root {
   --white: #ebebeb;
   --black: #000000;
-  --link: #0000ee;
-  --hover: #551a8b;
-  --font-family: -apple-system, sans-serif;
+  --hover: #240c0ccc;
+  --outline: #da70d6;
+  --font-family: "source-sans-pro";
 }
 
 /****************************************
@@ -38,5 +46,5 @@ a:active {
 *****************************************/
 /* Ayuda visual temporal */
 .outline {
-  outline: 2px dotted blue;
+  outline: 3px dotted var(--outline);
 }
