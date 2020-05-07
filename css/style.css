@@ -12,7 +12,9 @@
 :root {
   --white: #ebebeb;
   --black: #000000;
-  --hover: #240c0ccc;
+  --link: #072a74;
+  --hover: #361736;
+  --gradient: #8526e5;
   --outline: #da70d6;
   --font-family: "source-sans-pro";
 }
@@ -24,11 +26,16 @@ body {
   color: var(--black);
   background: var(--white);
   font-family: var(--font-family);
+  min-height: 100vh;
 }
 
 a {
+  font-size: 1.3em;
   text-decoration: none;
+  position: relative;
   cursor: pointer;
+  color: var(--link);
+  transition: all 0.4s ease;
 }
 
 a:hover,
@@ -37,9 +44,83 @@ a:active {
   text-decoration: none;
 }
 
+a::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  right: 0px;
+  bottom: -3px;
+  left: 0px;
+  background-color: var(--link);
+}
+a:hover {
+  color: var(--gradient);
+}
+a:hover::before {
+  background: linear-gradient(to right, var(--link) 40%, var(--gradient) 75%);
+}
+
 /****************************************
 *    Componentes - Common
 *****************************************/
+/* Header */
+.header {
+  width: min(1000px, 90%);
+  height: 200px;
+  margin: 0 auto;
+  padding: 1.2em 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.logo::before {
+  display: none;
+}
+
+.logo:hover {
+  opacity: 0.6;
+}
+
+@media (min-width: 40em) {
+  .header {
+    max-height: 160px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* Menú */
+.menu ul {
+  display: flex;
+  gap: 2em;
+  grid-template-columns: repeat(3, 110px);
+  justify-content: center;
+  justify-items: center;
+  height: 100%;
+}
+
+/* Submenu */
+.submenu {
+  position: relative;
+}
+
+.submenu li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 0.5em;
+}
+
+.submenu li:nth-child(2) {
+  margin-top: 2.5em;
+}
 
 /****************************************
 *    Helpers

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es-MX">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,31 +9,20 @@
       href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2322424/minireset.css"
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Vanilla Js</title>
+    <title>Vanilla Js | Proyectos</title>
   </head>
   <body>
-    <header class="header" role="banner">
+    <header role="banner">
       <a class="logo" href="/">
         <img src="./assets/images/logo.png" alt="Logo" />
       </a>
-      <nav class="menu" role="navigation">
+      <nav>
         <ul>
           <li><a href="/sobre-mi.html">Sobre mi</a></li>
-          <li x-data="{ isOpen: false }">
-            <a href="#" @click=" isOpen = !isOpen">Proyectos</a>
-            <ul class="submenu" x-show="isOpen">
-              <li><a href="#">ABC</a></li>
-              <li><a href="#">XYZ</a></li>
-            </ul>
-          </li>
+          <li><a href="/proyectos.html">Proyectos</a></li>
           <li><a href="/contacto.html">Contacto</a></li>
         </ul>
       </nav>
     </header>
-    <!-- Alpine.js -->
-    <script
-      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
-      defer
-    ></script>
   </body>
 </html>
